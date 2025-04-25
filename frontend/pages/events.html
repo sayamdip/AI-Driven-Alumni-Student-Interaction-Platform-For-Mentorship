@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Webinars | AlumniConnect</title>
+    <link rel="stylesheet" href="../css//event.css">
+   
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div>Alumni<span>Connect</span></div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./mentorship.html">Mentorship</a></li>
+                    <li><a style="color: var(--accent);">Events</a></li>
+                    <li><a href="./jobs.html">Jobs</a></li>
+                    <li><a href="./profile.html">Profile</a></li>
+                </ul>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Events & Webinars</h1>
+            <p>Connect with alumni and industry experts through a variety of virtual and in-person events designed to expand your network and enhance your professional growth.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li><a href="index.html">Home</a></li>
+                <li><span class="active">Events</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="container">
+            <!-- Event Filters -->
+            <div class="event-filters">
+                <form class="filter-form">
+                    <div class="form-group">
+                        <label for="event-type">Event Type</label>
+                        <select id="event-type">
+                            <option value="">All Types</option>
+                            <option value="workshop">Workshops</option>
+                            <option value="webinar">Webinars</option>
+                            <option value="networking">Networking</option>
+                            <option value="panel">Panel Discussions</option>
+                            <option value="career-fair">Career Fairs</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-location">Location</label>
+                        <select id="event-location">
+                            <option value="">All Locations</option>
+                            <option value="online">Virtual Events</option>
+                            <option value="campus">On Campus</option>
+                            <option value="offsite">Off Campus</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-industry">Industry</label>
+                        <select id="event-industry">
+                            <option value="">All Industries</option>
+                            <option value="tech">Technology</option>
+                            <option value="finance">Finance</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="education">Education</option>
+                            <option value="engineering">Engineering</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-date">Date</label>
+                        <input type="date" id="event-date">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Apply Filters</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Featured Event -->
+            <div class="featured-event">
+                <div class="featured-label">Featured</div>
+                <div class="featured-event-content">
+                    <div class="featured-event-image">
+                        <img src="https://psu-gatsby-files-prod.s3.amazonaws.com/s3fs-public/styles/4_3_1000w/public/2025/02/be-you-in-tech-summit-2025-60.jpg?h=ebb64d0e&itok=w9-aWynM" alt="Annual Alumni Tech Summit">
+                    </div>
+                    <div class="featured-event-details">
+                        <h3>Annual Alumni Tech Summit 2025</h3>
+                        <div class="featured-meta">
+                            <div class="featured-meta-item">
+                                <div class="icon">📅</div>
+                                <div class="info">
+                                    <div class="label">Date & Time</div>
+                                    <div class="value">March 15, 2025 • 9:00 AM - 5:00 PM</div>
+                                </div>
+                            </div>
+                            <div class="featured-meta-item">
+                                <div class="icon">📍</div>
+                                <div class="info">
+                                    <div class="label">Location</div>
+                                    <div class="value">Main Campus, Alumni Hall</div>
+                                </div>
+                            </div>
+                            <div class="featured-meta-item">
+                                <div class="icon">👥</div>
+                                <div class="info">
+                                    <div class="label">Attendees</div>
+                                    <div class="value">500+ Registered</div>
+                                </div>
+                            </div>
+                            <div class="featured-meta-item">
+                                <div class="icon">🎟️</div>
+                                <div class="info">
+                                    <div class="label">Seats Available</div>
+                                    <div class="value">50 Seats Left</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-description">
+                            <p>Join us for the most anticipated tech event of the year! The Annual Alumni Tech Summit brings together industry leaders, innovators, and alumni to discuss the latest trends in technology, AI, and digital transformation. Don't miss out on this opportunity to network and learn from the best in the field.</p>
+                        </div>
+                        <div class="featured-event-footer">
+                            <div class="seats-left">Hurry! Only 50 seats left</div>
+                            <a href="#" class="btn btn-success">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="events-grid">
+                <!-- Event Card 1 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMQ88Di_HeoyZXiAapNFwL9uJgG2U-hiHUSg&s" alt="Event Image">
+                        <div class="event-type virtual">Virtual</div>
+                        <div class="event-date">
+                            <div class="month">Mar</div>
+                            <div class="day">15</div>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3><a href="#">AI & Machine Learning Workshop</a></h3>
+                        <div class="event-meta">
+                            <div><span class="icon">📅</span>March 15, 2025</div>
+                            <div><span class="icon">⏰</span>10:00 AM - 12:00 PM</div>
+                        </div>
+                        <div class="event-description">
+                            <p>Learn the fundamentals of AI and machine learning from industry experts. This workshop is perfect for beginners and intermediate learners.</p>
+                        </div>
+                        <div class="event-footer">
+                            <div class="event-host">
+                                <div class="host-avatar">
+                                    <img src="https://dentalia.orionthemes.com/demo-1/wp-content/uploads/2016/10/dentalia-demo-deoctor-3-1-750x750.jpg" alt="Host Avatar">
+                                </div>
+                                <div class="host-info">
+                                    <div class="name">John Doe</div>
+                                    <div class="role">AI Specialist</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary btn-small">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://www.cryptus.in/image/networking2.jpg" alt="Event Image">
+                        <div class="event-type in-person">In-Person</div>
+                        <div class="event-date">
+                            <div class="month">Mar</div>
+                            <div class="day">20</div>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3><a href="#">Networking Night: Finance Professionals</a></h3>
+                        <div class="event-meta">
+                            <div><span class="icon">📅</span>March 20, 2025</div>
+                            <div><span class="icon">⏰</span>6:00 PM - 8:00 PM</div>
+                        </div>
+                        <div class="event-description">
+                            <p>Connect with finance professionals and alumni in an evening of networking and career growth opportunities.</p>
+                        </div>
+                        <div class="event-footer">
+                            <div class="event-host">
+                                <div class="host-avatar">
+                                    <img src="https://dentalia.orionthemes.com/demo-1/wp-content/uploads/2016/10/dentalia-demo-deoctor-5-1-750x750.jpg" alt="Host Avatar">
+                                </div>
+                                <div class="host-info">
+                                    <div class="name">Jane Smith</div>
+                                    <div class="role">Finance Expert</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary btn-small">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more event cards as needed -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">4</a>
+                <a href="#" class="page-link">5</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Alumni<span>Connect</span></div>
+                    <p>Connecting alumni worldwide to foster professional growth, mentorship, and lifelong learning.</p>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📸</a>
+                        <a href="#">🔗</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-heading">Quick Links</div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Mentorship</a></li>
+                        <li><a href="./events.html">Events</a></li>
+                        <li><a href="./jobs.html">Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-heading">Resources</div>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <div class="footer-heading">Contact Info</div>
+                    <div class="contact-info">
+                        <div><span class="contact-icon">📍</span>123 Alumni Lane, University City, UC 12345</div>
+                        <div><span class="contact-icon">📞</span>(123) 456-7890</div>
+                        <div><span class="contact-icon">✉️</span>info@alumniconnect.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2023 AlumniConnect. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

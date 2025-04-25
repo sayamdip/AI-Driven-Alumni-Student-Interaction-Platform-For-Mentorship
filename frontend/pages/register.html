@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Connect - Registration</title>
+   <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🎓</span> AlumniConnect
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Join Our Alumni Network</h1>
+            <p>Connect with students, share experiences, and help shape the next generation of professionals.</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="registration-container">
+            <div class="registration-image"></div>
+            <div class="registration-form">
+                <h2 class="form-title">Create Your Account</h2>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Create a password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>I am a:</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="alumni" name="userType" value="alumni" checked>
+                                <label for="alumni">Alumni</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="student" name="userType" value="student">
+                                <label for="student">Current Student</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="graduationYearGroup">
+                        <label for="graduationYear">Graduation Year</label>
+                        <input type="number" id="graduationYear" class="form-control" placeholder="Year of graduation" min="1900" max="2030">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="department">Department/Major</label>
+                        <input type="text" id="department" class="form-control" placeholder="Enter your department or major" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Register Now</button>
+                </form>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    
+    <section class="info-section">
+        <div class="container">
+            <h2>Why Join Our Alumni Network?</h2>
+            <div class="benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Networking</h3>
+                    <p>Connect with alumni and students from your field and expand your professional network.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Career Opportunities</h3>
+                    <p>Access exclusive job postings, internships, and career advancement opportunities.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Mentorship</h3>
+                    <p>Share your expertise or receive guidance from experienced professionals in your field.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AlumniConnect. All rights reserved.</p>
+        </div>
+    </footer>
+    
+   
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('registrationForm');
+    
+        // Show/hide graduation year based on user type
+        document.querySelectorAll('input[name="userType"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.getElementById('graduationYearGroup').style.display =
+                    this.value === 'alumni' ? 'block' : 'none';
+            });
+        });
+    
+        // Handle form submission
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+    
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                userType: document.querySelector('input[name="userType"]:checked').value,
+                graduationYear: document.getElementById('graduationYear').value || null,
+                department: document.getElementById('department').value
+            };
+    
+            try {
+                const response = await fetch("http://localhost:3000/api/users/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                });
+    
+                const result = await response.json();
+                alert(result.message);
+                if (response.ok) {
+                    form.reset();
+                    window.location.href="./login.html"
+                }
+                
+            } catch (error) {
+                console.error("Error during registration:", error);
+                alert("Registration failed. Please try again.");
+            }
+        });
+    });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Alumni Portal</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, <span id="userName"></span></h2>
+        <p>Email: <span id="userEmail"></span></p>
+
+        <h3>Your Information:</h3>
+       
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function() {
+            const userEmail = localStorage.getItem("userEmail");
+
+            if (!userEmail) {
+                alert("Unauthorized Access! Please login.");
+                window.location.href = "login.html";
+                return;
+            }
+
+            document.getElementById("userEmail").textContent = userEmail;
+            document.getElementById("userName").textContent = localStorage.getItem("full_name");
+
+            try {
+                const response = await fetch(`http://localhost:5000/api/users/${userEmail}`);
+                const data = await response.json();
+
+                if (response.ok) {
+                    const userInfoTable = document.getElementById("userInfo");
+                    userInfoTable.innerHTML = "";
+
+                    Object.entries(data).forEach(([key, value]) => {
+                        if (key !== "password") {  // Hide password
+                            const row = `<tr><td>${key}</td><td>${value}</td></tr>`;
+                            userInfoTable.innerHTML += row;
+                        }
+                    });
+                } else {
+                    console.error("Failed to fetch user data");
+                }
+            } catch (error) {
+                console.error("Error fetching user data:", error);
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem("userEmail");
+            localStorage.removeItem("full_name");
+            alert("You have logged out.");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
