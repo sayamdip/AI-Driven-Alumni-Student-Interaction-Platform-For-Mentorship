@@ -1,4 +1,4 @@
-# AI-Driven-Alumni-Student-Interaction-Platform-For-Mentorship
+# Alumni-Student-Interaction-Platform-For-Mentorship
 The Alumni Connect project is a web-based platform designed to bridge the gap between alumni and current students of an institution. The primary goal of this project is to foster meaningful interactions, mentorship opportunities, and career guidance by creating a centralized hub where alumni and students can connect, communicate, and collaborate.
 
 ## 🚀 How to Start the AlumniConnect Service
