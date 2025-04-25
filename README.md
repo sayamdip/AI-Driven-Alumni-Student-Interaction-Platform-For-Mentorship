@@ -35,4 +35,3 @@ Open with Live Server
 - Frontend: HTML, CSS, JavaScript, eJS
 - Backend: Node.js, Express.js
 - Database: MySQL
-- 
